@@ -1,0 +1,1 @@
+this repo has the acitivites of second day in holbertonschool

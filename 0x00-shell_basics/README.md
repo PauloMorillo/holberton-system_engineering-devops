@@ -1,0 +1,1 @@
+Second day in holberton learning shell activities

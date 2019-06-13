@@ -1,0 +1,1 @@
+this directory content antyrhing about excercise day 4, its about permissions

@@ -1,0 +1,3 @@
+#!/bin/bash
+tail -n +2 |cut -f1|sort|uniq -c| sort -g|tail -11|sort -r| tr " " "/"|rev|cut -d / -f1|rev
+

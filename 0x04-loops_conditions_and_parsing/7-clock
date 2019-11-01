@@ -7,8 +7,7 @@ do
     while [ $i -lt 60 ]
     do
 	case "$i" in
-	    0) h=$((h+1))
-		echo "Hour: $h";;
+	    0) echo "Hour: $h";;
 	    *) echo "$i"
 	esac
 	i=$((i+1))

@@ -1,0 +1,1 @@
+This directory has the exercise to learn bash scripts with loops, conditions and parsing

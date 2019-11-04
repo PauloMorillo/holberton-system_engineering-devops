@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script is to show the currents Process by user
+# shellcheck disable=SC2009
+ps axu | grep bash

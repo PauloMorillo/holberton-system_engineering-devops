@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script is to show the currents Process by user
+ps axu

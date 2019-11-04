@@ -1,0 +1,1 @@
+This directory has the exercise to learn about process and signals

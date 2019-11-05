@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is to show the currents Process call bash
+_term() {
+  echo "I am invincible!!!"
+}
+while true
+do
+echo "To infinity and beyond"
+trap _term SIGTERM
+sleep 2
+done

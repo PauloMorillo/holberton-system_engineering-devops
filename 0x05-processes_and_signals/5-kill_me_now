@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script kill a process call 4-to_infinity_and_beyond
+# shellcheck disable=SC2009
+kill "$(pgrep -f 4-to_infinity_and_beyond)"

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Scxript to show ports linstening
+netstat -lp

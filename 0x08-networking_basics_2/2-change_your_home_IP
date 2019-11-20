@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script add some shorcuts ip and modify localhost
+cp /etc/hosts ~/hosts.new
+echo "127.0.0.2 localhost" > ~/hostsfirst
+echo "8.8.8.8 facebook.com" >> ~/hostsfirst
+cat ~/hosts.new >> ~/hostsfirst
+cat ~/hostsfirst > /etc/hosts

@@ -1,0 +1,1 @@
+This directory is created to learn about infraestructure of web plarforms, Servers, DNS, ARchitecture, and more

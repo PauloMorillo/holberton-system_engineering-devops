@@ -1,0 +1,1 @@
+this directory has the exercises to learn a little bit of configuration management with puppet tool

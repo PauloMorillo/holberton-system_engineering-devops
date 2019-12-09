@@ -1,3 +1,3 @@
-exec { "killprocess":
- command => '/usr/bin/pkill killmenow'
+exec { 'killprocess':
+command => '/usr/bin/pkill killmenow'
 }

@@ -1,0 +1,1 @@
+This folder has the exercise to create a key for a server, connect to a remote server, and change config file

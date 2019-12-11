@@ -3,3 +3,4 @@
 sudo apt-get install nginx
 sudo ufw allow 'Nginx HTTP'
 echo "Holberton School" > /var/www/html/index.html
+curl http://35.229.119.119/

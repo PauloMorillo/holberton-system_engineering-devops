@@ -1,13 +1,3 @@
-Add new user:
-    adduser nameofuser
-    usermod -aG sudo nameofuser
-Install Nginx:
-	sudo apt-get update
-	sudo apt-get install nginx
-Firewall:
-	sudo ufw app list      "see the list to use ports"
-	sudo ufw allow 'nameofapp'   "allow app"
-	sudo ufw status 	     "to see status of firewall"
-To check Nginx status:
-   systemctl status nginx
-To change the index page go to /var/www/html
+#!/usr/bin/env bash
+# This script configures a ubuntu machine
+sudo apt-get install nginx

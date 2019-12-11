@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This script configures a ubuntu machine
 sudo apt-get install nginx
+echo "Holberton School" > /var/www/html/index.html

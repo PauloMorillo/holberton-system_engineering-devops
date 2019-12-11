@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script configures a ubuntu machine
+sudo apt-get update -y
+sudo apt-get install nginx -y
+#sudo chmod -R $USER:$USER /var/www/
+#sudo chmod -R $USER:$USER /var/www/html/
+sudo touch /var/www/html/index.html
+echo "Holberton School" > index.html
+sudo mv index.html /var/www/html/index.html
+sudo sed -i '46 i \\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+sudo service nginx restart

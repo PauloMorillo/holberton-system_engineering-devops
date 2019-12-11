@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # This script configures a ubuntu machine
-sudo apt-get install nginx
-sudo ufw allow 'Nginx HTTP'
-echo "Holberton School" > /var/www/html/index.html
-curl http://35.229.119.119/
+sudo apt-get install nginx --asume-yes

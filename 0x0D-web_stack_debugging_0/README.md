@@ -1,0 +1,1 @@
+This directory has the steps to fix a problem in a container only start apache

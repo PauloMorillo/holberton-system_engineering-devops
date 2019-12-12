@@ -13,4 +13,4 @@ echo "Ceci n'est pas une page" > 404.html
 echo " " >> 404.html
 sudo mv 404.html /usr/share/nginx/html/404.html
 sudo sed -i '42 i \\terror_page 404 /404.html;' /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx start

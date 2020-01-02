@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script add the hostname to headers response
 sed -i "46 i \\tadd_header X-Served-By $hostname;" /etc/nginx/sites-enabled/default
-sudo service nginx restart
+sudo service nginx start

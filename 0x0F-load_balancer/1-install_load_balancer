@@ -4,6 +4,7 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-1.8 -y
 sudo apt-get update -y
 sudo apt-get install haproxy=1.8.\*
+sudo service haproxy start
 echo "backend web
               balance roundrobin
               server 940-web-01 35.229.119.119:80 check

@@ -2,5 +2,5 @@
 # This script add the hostname to headers response
 apt-get update
 apt-get -y install nginx
-sed -i "46 i \\tadd_header X-Served-By $hostname;" /etc/nginx/sites-available/default
+sed -i "46 i add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
 service nginx restart

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script configure a HA PROXY
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-1.8 -y
+sudo apt-get update -y
+sudo apt-get install haproxy=1.8.\*
+echo "backend web
+              balance roundrobin
+              server 940-web-01 35.229.119.119:80 check
+              server 940-web-02 104.196.21.149:80 check
+     frontend http
+              bind *:80
+              mode http
+              default_backend web" > confighapro
+cat /etc/haproxy/haproxy.cfg > configprox
+cat confighapro >> configprox
+sudo mv configprox /etc/haproxy/haproxy.cfg
+sudo service haproxy restart

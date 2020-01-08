@@ -1,0 +1,7 @@
+#!/usr/bin/env bash 
+# this script let you run a command like another user
+if [ "$#" -gt 0 ]; then
+    sudo -u "$1" whoami
+else
+    whoami
+fi

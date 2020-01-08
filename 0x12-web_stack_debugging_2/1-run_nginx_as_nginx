@@ -2,4 +2,6 @@
 # this script add permissions to modify nginx conf and add user for nginx process
 chmod 600 /etc/nginx/nginx.conf
 sed -i "1 i user nginx;" /etc/nginx/nginx.conf
+sed -i "23 i listen 8080;" /etc/nginx/sites-enabled/default
+pkill apache2
 sudo service nginx restart

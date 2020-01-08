@@ -4,4 +4,4 @@ chmod 600 /etc/nginx/nginx.conf
 sed -i "1 i user nginx;" /etc/nginx/nginx.conf
 sed -i "s/80/8080/" /etc/nginx/sites-enabled/default
 pkill -9 apache2
-sudo nginx restart
+sudo service nginx restart

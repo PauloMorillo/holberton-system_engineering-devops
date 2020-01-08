@@ -1,5 +1,5 @@
 #!/usr/bin/env bash 
 # this script add permissions to modify nginx conf and add user for nginx process
 chmod 600 /etc/nginx/nginx.conf
-sed -i "1 -i user nginx;"
+sed -i "1 i user nginx;" /etc/nginx/nginx.conf
 sudo service nginx restart

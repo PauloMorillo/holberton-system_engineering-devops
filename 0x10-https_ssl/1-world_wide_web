@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This is a script to show the subdomain info
+if [ "$#" -gt 0 ]; then
+   if [ "$#" -gt 1 ]; then
+       dig "$2"".""$1" | grep -A1 'ANSWER SECTION:' | tail -n 1| awk -v subdo="$2" '{ print "The subdomain", subdo,"is a", $4, "record and points to", $5}'
+   else
+       dig "www"".""$1" | grep -A1 'ANSWER SECTION:' | tail -n 1| awk -v subdo="www" '{ print "The subdomain", subdo,"is a", $4, "record and points to", $5}'
+       dig "lb-01"".""$1" | grep -A1 'ANSWER SECTION:' | tail -n 1| awk -v subdo="lb-01" '{ print "The subdomain", subdo,"is a", $4, "record and points to", $5}'
+       dig "web-01"".""$1" | grep -A1 'ANSWER SECTION:' | tail -n 1| awk -v subdo="web-01" '{ print "The subdomain", subdo,"is a", $4, "record and points to", $5}'
+       dig "web-02"".""$1" | grep -A1 'ANSWER SECTION:' | tail -n 1| awk -v subdo="web-02" '{ print "The subdomain", subdo,"is a", $4, "record and points to", $5}'
+   fi
+fi

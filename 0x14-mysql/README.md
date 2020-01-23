@@ -1,0 +1,1 @@
+This directory has the exercise to configurate the mysql databases like master-slave

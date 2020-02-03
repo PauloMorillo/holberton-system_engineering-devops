@@ -22,4 +22,4 @@ if __name__ == "__main__":
                                                           len(licomplete),
                                                           alltask))
     for title in licomplete:
-        print("\b {}".format(title))
+        print("\t {}".format(title))

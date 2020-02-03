@@ -13,7 +13,7 @@ if __name__ == "__main__":
         dicuser[datauser.get("id")] = datauser.get("username")
     ans2 = requests.get("https://jsonplaceholder.typicode.com/todos/")
     licomplete = []
-    idl = 1
+    idl = ans2.json()[0].get("userId")
     lis = []
     dictojson = dict()
     for dicto in ans2.json():

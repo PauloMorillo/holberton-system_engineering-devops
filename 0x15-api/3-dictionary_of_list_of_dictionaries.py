@@ -2,6 +2,7 @@
 """ This script get data from an API with ID and send to JSON file """
 
 
+from collections import OrderedDict
 import json
 import requests
 
@@ -17,12 +18,13 @@ if __name__ == "__main__":
     lis = []
     dictojson = dict()
     for dicto in ans2.json():
+        dictask = OrderedDict()
         # print(dicto)
         id = dicto.get("userId")
         # print(id, "and type is ", type(id))
-        dictask = {"username": dicuser.get(id),
-                   "completed": dicto.get("completed"),
-                   "task": dicto.get("title")}
+        dictask["username"] = dicuser.get(id)
+        dictask["task"] = dicto.get("title")
+        dictask["completed"] = dicto.get("completed")
         licomplete.append(dictask)
         if idl is not id:
             # print("poer aquí pasé")

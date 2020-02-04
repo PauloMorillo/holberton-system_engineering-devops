@@ -10,13 +10,13 @@ if __name__ == "__main__":
     ans = requests.get("https://jsonplaceholder.typicode.com/users")
     # print(ans.json())
     dicuser = dict()
+    dictojson = dict()
     for datauser in ans.json():
         dicuser[datauser.get("id")] = datauser.get("username")
+        dictojson[datauser.get("id")] = []
     ans2 = requests.get("https://jsonplaceholder.typicode.com/todos")
     licomplete = []
     idl = ans2.json()[0].get("userId")
-    lis = []
-    dictojson = dict()
     for dicto in ans2.json():
         dictask = OrderedDict()
         # print(dicto)
@@ -25,15 +25,6 @@ if __name__ == "__main__":
         dictask["username"] = dicuser.get(id)
         dictask["task"] = dicto.get("title")
         dictask["completed"] = dicto.get("completed")
-        licomplete.append(dictask)
-        if idl is not id:
-            # print("poer aquí pasé")
-            dictojson[idl] = licomplete
-            lis.append(dictojson)
-            # print(dictojson)
-            licomplete = []
-        idl = id
-    dictojson[idl] = licomplete
-    # print(dictojson)
+        dictojson[id].append(dictask)
     with open("todo_all_employees.json", 'w', encoding="UTF-8") as jsf:
         json.dump(dictojson, jsf)

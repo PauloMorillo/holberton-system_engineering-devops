@@ -33,5 +33,5 @@ if __name__ == "__main__":
         idl = id
     dictojson[idl] = licomplete
     # print(dictojson)
-    with open("todo_all_employees.json", 'w', encoding="UTF-8") as jsf:
+    with open("todo_all_employees.json", 'w') as jsf:
         json.dump(dictojson, jsf)

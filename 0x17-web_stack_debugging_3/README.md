@@ -1,0 +1,1 @@
+# This folder has exercise to debugg wordpress

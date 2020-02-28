@@ -3,5 +3,5 @@ exec { 'fix--for-nginx':
 command  => 'sudo sed -i "1i worker_rlimit_nofile 30000;" "limits.conf" | sudo service nginx restart',
 provider => shell,
 cwd      => '/etc/security/',
-path     => '/usr/bin:/usr/sbin:/bin',
+path     => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
 }
